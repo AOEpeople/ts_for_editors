@@ -14,7 +14,7 @@ $GLOBALS['TCA']['sys_template']['ctrl']['adminOnly'] = '0';
 
 // load default configuration
 if(!$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['flexForm']) {
-	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['flexForm'] = 'EXT:ts_for_editors/Configuration/FlexForms/sys_template.tx_tsforeditors_constants.xml';
+	$GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][$_EXTKEY]['flexForm'] = 'EXT:ts_for_editors/Configuration/FlexForm/sys_template.tx_tsforeditors_constants.xml';
 }
 
 // add flexform column

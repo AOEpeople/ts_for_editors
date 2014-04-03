@@ -1,0 +1,82 @@
+<T3DataStructure>
+	<meta>
+		<!-- This is an example file -->
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>Strings</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el type="array">
+					<!--<plugin.tx_tsforeditors.helloworld>-->
+						<!--<TCEforms>-->
+							<!--<label>Hello World</label>-->
+							<!--<config>-->
+								<!--<type>none</type>-->
+								<!--<rows>2</rows>-->
+								<!--<cols>80</cols>-->
+								<!--<default>-->
+									<!--This default FlexForm shows off the capabilities and serves as a cookbook.-->
+									<!--see EXT:ts_for_editors/Configuration/FlexForms/sys_template.tx_tsforeditors_constants.xml-->
+								<!--</default>-->
+							<!--</config>-->
+						<!--</TCEforms>-->
+					<!--</plugin.tx_tsforeditors.helloworld>-->
+					<!--<plugin.tx_tsforeditors.string>-->
+						<!--<TCEforms>-->
+							<!--<label>A String</label>-->
+							<!--<config>-->
+								<!--<type>input</type>-->
+								<!--<default>edit me</default>-->
+							<!--</config>-->
+						<!--</TCEforms>-->
+					<!--</plugin.tx_tsforeditors.string>-->
+					<plugin.tx_tsforeditors.checkbox>
+						<TCEforms>
+							<label>A Checkbox</label>
+							<config>
+								<type>check</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">Option</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</plugin.tx_tsforeditors.checkbox>
+					<plugin.tx_tsforeditors.select>
+						<TCEforms>
+							<label>A select field</label>
+							<config>
+								<type>select</type>
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0"></numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Option 1</numIndex>
+										<numIndex index="1">1</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">Option 2</numIndex>
+										<numIndex index="1">2</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">Option 3</numIndex>
+										<numIndex index="1">3</numIndex>
+									</numIndex>
+								</items>
+								<maxitems>1</maxitems>
+								<size>1</size>
+							</config>
+						</TCEforms>
+					</plugin.tx_tsforeditors.select>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>
