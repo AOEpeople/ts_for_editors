@@ -2,6 +2,7 @@
 <T3locallang>
 	<meta type="array">
 		<type>database</type>
+		<description></description>
 	</meta>
 	<data type="array">
 		<languageKey index="default" type="array">

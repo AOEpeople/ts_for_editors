@@ -32,4 +32,4 @@ $tempColumns = array (
 );
 
 t3lib_extMgm::addTCAcolumns('sys_template',$tempColumns,1);
-t3lib_extMgm::addToAllTCAtypes('sys_template','--div--;LLL:EXT:ts_for_editors\Resources\Private\Language\locallang_db.xml:sys_template.tx_tsforeditors_constants.tab, tx_tsforeditors_constants', '', 'after:description');
+t3lib_extMgm::addToAllTCAtypes('sys_template','--div--;LLL:EXT:ts_for_editors/Resources/Private/Language/locallang_db.xml:sys_template.tx_tsforeditors_constants.tab, tx_tsforeditors_constants', '', 'after:description');
