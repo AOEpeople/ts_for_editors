@@ -12,15 +12,25 @@ class Tx_TsForEditors_Hooks_TsTemplate {
 	 */
 	public function includeStaticTypoScriptSourcesAtEnd($params, $tsTemplate) {
 		if ($params['row']['tx_tsforeditors_constants']) {
-			/* @var $flexformService Tx_Extbase_Service_FlexFormService */
-			$flexformService = t3lib_div::makeInstance('Tx_Extbase_Service_FlexFormService');
-			$data = $flexformService->convertFlexFormContentToArray($params['row']['tx_tsforeditors_constants']);
+			$tsTemplate->constants[] = $this->getOverrideTsConstants(
+				$params['row']['tx_tsforeditors_constants']
+			);
+		}
+	}
 
-			$constants = $this->flattenArray($data);
-			if($constants) {
-				array_walk($constants, function(&$value, $key) { $value = sprintf('%s = %s', $key, $value); });
-				$tsTemplate->constants[] = implode("\n", $constants);
-			}
+	protected function getOverrideTsConstants($xmlData) {
+		/* @var $flexformService Tx_Extbase_Service_FlexFormService */
+		$flexformService = t3lib_div::makeInstance('Tx_Extbase_Service_FlexFormService');
+		$data = $flexformService->convertFlexFormContentToArray($xmlData);
+
+		$constants = $this->flattenArray($data);
+		if ($constants) {
+			array_walk($constants, function (&$value, $key) {
+				$value = sprintf('%s = %s', $key, $value);
+			});
+			return implode("\n", $constants);
+		} else {
+			return '';
 		}
 	}
 
